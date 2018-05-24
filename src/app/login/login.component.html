@@ -1,0 +1,36 @@
+<div class="content-section ui-fluid">
+  <div class="ui-g">
+    <div class="ui-g-12 ui-md-2">
+
+    </div>
+    <div class="login-form-container ui-g-12 ui-md-8">
+      <div class="ui-g-12 center-text "><h1>XX系统登录界面</h1></div>
+      <div class="ui-g-12">
+        <input pInputText type="text" placeholder="请输入用户名" [(ngModel)]="username" />
+
+      </div>
+      <div *ngIf="usernamevalid" class="ui-g-12 text-danger">用户名必须输入！</div>
+      <div class="ui-g-12">
+        <span class="ui-float-label">
+          <input id="float-input-password" type="password" pInputText [(ngModel)]="password" />
+          <label for="float-input-password">密码</label>
+        </span>
+      </div>
+      <div class="ui-g-12">
+        <div class="ui-g-3"></div>
+        <div class="ui-g-3">
+          <button pButton type="button" (click)="dologin()" label="登录" class="ui-button-success"></button>
+        </div>
+        <div class="ui-g-3">
+          <button pButton type="button" (click)="dologin()" label="忘记密码" class="ui-button-danger"></button>
+        </div>
+        <div class="ui-g-3"></div>
+      </div>
+
+    </div>
+    <div class="ui-g-12 ui-md-2">
+
+    </div>
+
+  </div>
+</div>
